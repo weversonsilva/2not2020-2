@@ -134,11 +134,7 @@ let densidade9 = (populacao, area) => (populacao / area)
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
-for(let i = 0; i < estadosNe.length; i++) {
-    console.log(estadosNe[i])
-}    
-
-estado1['densidade demografica'] = 'densidade1'
+estado1['densidade demografica'] = densidade1
 estado2['densidade demografica'] = densidade2
 estado3['densidade demografica'] = densidade3
 estado4['densidade demografica'] = densidade4
@@ -147,6 +143,11 @@ estado6['densidade demografica'] = densidade6
 estado7['densidade demografica'] = densidade7
 estado8['densidade demografica'] = densidade8
 estado9['densidade demografica'] = densidade9
+
+for(let i = 0; i < estadosNe.length; i++) {
+    estado1['densidade demográfica'] = densidade1 = (populacao, area) => (populacao / area)
+    console.log(densidade9(estado1.area, estado1.populacao))  
+}    
 
 console.log(estadosNe)
 
