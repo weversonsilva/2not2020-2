@@ -98,33 +98,8 @@ console.log(estadosNe)
 */
 
 
-let densidade1 = (populacao, area) => (populacao / area)
-    console.log(densidade1(estado1.area, estado1.populacao))
-
-let densidade2 = (populacao, area) => (populacao / area)
-    console.log(densidade2(estado2.area, estado2.populacao))
-
-let densidade3 = (populacao, area) => (populacao / area)
-    console.log(densidade3(estado3.area, estado3.populacao))  
-    
-let densidade4 = (populacao, area) => (populacao / area)
-    console.log(densidade4(estado4.area, estado4.populacao))    
-
-let densidade5 = (populacao, area) => (populacao / area)
-    console.log(densidade5(estado5.area, estado5.populacao))   
-    
-let densidade6 = (populacao, area) => (populacao / area)
-    console.log(densidade6(estado6.area, estado6.populacao))   
-    
-let densidade7 = (populacao, area) => (populacao / area)
-    console.log(densidade7(estado7.area, estado7.populacao))   
-    
-let densidade8 = (populacao, area) => (populacao / area)
-    console.log(densidade8(estado8.area, estado8.populacao))   
-    
-let densidade9 = (populacao, area) => (populacao / area)
-    console.log(densidade9(estado9.area, estado9.populacao))    
-
+let densidade = (populacao, area) => (populacao / area)
+   
 /*
    3) Percorra o vetor estadosNe usando um for tradicional. Para cada estado,
       chame a arrow function criada em 2) e efetue o cálculo correspondente.
@@ -134,32 +109,32 @@ let densidade9 = (populacao, area) => (populacao / area)
       Durante este mesmo loop, elimine a propriedade 'sigla' dos objetos.
 
 */
-estado1['densidade demografica'] = densidade1
-estado2['densidade demografica'] = densidade2
-estado3['densidade demografica'] = densidade3
-estado4['densidade demografica'] = densidade4
-estado5['densidade demografica'] = densidade5
-estado6['densidade demografica'] = densidade6
-estado7['densidade demografica'] = densidade7
-estado8['densidade demografica'] = densidade8
-estado9['densidade demografica'] = densidade9
 
 for(let i = 0; i < estadosNe.length; i++) {
-    estado1['densidade demográfica'] = densidade1 = (populacao, area) => (populacao / area)
-    console.log(densidade9(estado1.area, estado1.populacao))  
-}    
+   let dd = densidade(estadosNe[i].populacao, estadosNe[i].area)
+   estadosNe[i]['densidade demográfica'] = dd
+   delete estadosNe[i].sigla
+ }
 
-console.log(estadosNe)
+console.log(estadosNe) 
 
+console.log('-----------------------------------')
 
 /* 4) Escreva uma arrow function que receba um objeto. Na função, use for..in
       para extrair as propriedades e seus valores e exibi-los com console.log().
 
 */
-
+let mostrar  = propriedades => {
+    for(let valor in propriedades) {
+        console.log(`Propriedades: ${valor}; Valor: ${propriedades[valor]}`)
+    }
+}
 /* 5) Percorra o vetor estadosNe usando for..of. Para cada objeto no vetor,
       invoque a função escrita em 4) para exibi-lo.
-
+*/
+for(let percorre of estadosNe) {
+    mostrar(percorre)
+}
 /*
    6)
       a) Declare um vetor vazio.
@@ -172,3 +147,15 @@ console.log(estadosNe)
          já existentes, e assim por diante.
 
 */
+let vetor1 = []
+vetor1.push('Sergipe')
+vetor1.unshift('Alagoas')
+vetor1.splice(1, 0, 'Rio Grande do Norte')
+vetor1.splice(1, 0, 'Paraíba')
+vetor1.splice(2, 0, 'Pernambuco')
+vetor1.splice(1, 0, 'Ceará')
+vetor1.splice(4, 0, 'Piauí')
+vetor1.splice(2, 0, 'Maranhão')
+vetor1.splice(1, 0, 'Bahia')
+
+console.log(vetor1)
