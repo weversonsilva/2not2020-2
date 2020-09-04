@@ -23,5 +23,6 @@ console.log('----------------------------------')
 console.time('10000')
 // Encontrar o primeiro nome da lista que possui mais de 10000 pessoas registradas com ele
 let pos = buscaSequencial(listaNomes, 10000, (obj, valor) => obj.frequency_total > valor)
+// Exibe o objeto da posição encontrada e depois a própria posição
 console.log(listaNomes[pos], pos)
 console.timeEnd('10000')
