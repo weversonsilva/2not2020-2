@@ -42,7 +42,7 @@ console.timeEnd('num')
 
 console.log(nums)
 
-/*
+
 let listaNomes = require('./dados/100-mil-nomes')
 
 console.time('Nomes')
@@ -50,4 +50,3 @@ selectionSort(listaNomes)
 console.timeEnd('Nomes')
 
 console.log(listaNomes)
-*/

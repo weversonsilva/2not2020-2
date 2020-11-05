@@ -60,7 +60,7 @@ console.log(nomeCandidatos)
 // localeCompare() faz corretamente a ordenação considerando os acentos mas é muito demorado
 const candidatos1000 = candidatos.slice(0, 999)
 console.time('Teste candidatos 1000')
-bubbleSort(candidatos1000, (a, b) => a.NM_URNA_CANDIDATO.localeCompare(b.NM_URNA_CANDIDATO, 'pt-BR')>0)
+bubbleSort(candidatos1000, (a, b) => a.NR_CANDIDATO > b.NR_CANDIDATO)
 console.timeEnd('Teste candidatos 1000')
 
 console.log(candidatos1000)
